@@ -59,3 +59,4 @@ async def randomidea(ctx):
 
     await ctx.send(f"Here's a random Idea for the hackathon:\n{random_idea}")
 
+bot.run(TOKEN)
