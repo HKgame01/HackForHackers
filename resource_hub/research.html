@@ -96,6 +96,11 @@
                         placeholder="Enter contributing guidelines"></textarea>
                 </div>
                 <div class="mb-3">
+                    <label for="technologies-used" class="form-label">Technologies used (comma-separated)</label>
+                    <input type="text" id="technologies-used" class="form-control"
+                        placeholder="Enter technologies used">
+                </div>
+                <div class="mb-3">
                     <label for="project-license" class="form-label">License</label>
                     <input type="text" id="project-license" class="form-control" placeholder="Enter project license">
                 </div>
@@ -158,7 +163,7 @@
         const projectUsage = document.getElementById("project-usage").value;
         const projectContributing = document.getElementById("project-contributing").value;
         const projectLicense = document.getElementById("project-license").value;
-
+        const technologiesUsedInput = document.getElementById("technologies-used").value;
         const readmeContent = `# ${projectName}
 
 ${projectDescription}
@@ -185,6 +190,9 @@ ${projectContributing}
 ## License
 
 ${projectLicense}
+
+## Technologies used
+![My Skills](https://skillicons.dev/icons?i=${technologiesUsedInput})
 `;
 
         document.getElementById("documentationModalLabel").textContent = `${projectName} README`;
