@@ -3,7 +3,7 @@ const searchInput = document.getElementById('searchInput');
 
 async function fetchMentors() {
     try {
-        const response = await fetch('https://randomuser.me/api/?results=12');
+        const response = await fetch('https://randomuser.me/api/?results=30');
         const data = await response.json();
         return data.results;
     } catch (error) {
@@ -49,7 +49,32 @@ function searchMentors() {
 }
 
 function showPopup(title, email, phone = '') {
-    console.log('Popup:', title, email, phone);
+    const modal = document.getElementById('mentorModal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalEmail = document.getElementById('modalEmail');
+    const modalPhone = document.getElementById('modalPhone');
+
+    modalTitle.textContent = title;
+    modalEmail.textContent = email;
+    modalPhone.textContent = phone;
+
+    modal.style.display = 'block';
+}
+
+function closePopup() {
+    const modal = document.getElementById('mentorModal');
+    modal.style.display = 'none';
+}
+
+function connect() {
+    alert('Connect button clicked');
+    closePopup();
+}
+
+function scheduleCall() {
+    
+    alert('Schedule Call button clicked');
+    closePopup();
 }
 
 window.addEventListener('load', () => {
