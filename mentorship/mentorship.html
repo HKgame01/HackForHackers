@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="mentorship.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand">HackQuest Nexus</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Resource Hub</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Planner</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Hackathons</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Generate Ideas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Code Quests</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../project_showcase/project_showcase.html">Project Showcase</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../profile/profile.html">
+                            <i class="fa fa-user"></i>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <section class="mentor-list">
+        <div class="container">
+            <h2 class="text-center mb-4">Find a Mentor</h2>
+            <div class="search-form">
+                <input type="text" placeholder="Search by Skill or Expertise" id="searchInput">
+                <button onclick="searchMentors()">Search</button>
+            </div>
+            <div class="mentor-grid" id="mentorGrid">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer bg-dark text-white text-center py-3">
+        <div class="container">
+            <p>&copy; 2023 HackQuest Nexus. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="mentorship.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
