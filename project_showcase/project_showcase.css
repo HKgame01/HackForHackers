@@ -1,11 +1,17 @@
 body {
+    background: linear-gradient(45deg, #25274d, #000);
     color: beige;
+    margin: 10px;
+    padding: 10px;
 }
 h1{
     font-size: 3rem;
 }
 .card {
-    background-color: #1f1f1f;
+    background: linear-gradient(45deg, #25274d, #000);
+    color: beige;
+    margin: 10px;
+    padding: 10px;
     color: #fff;
     border: none;
     border-radius: 10px;

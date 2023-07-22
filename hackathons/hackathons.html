@@ -1,24 +1,24 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Profile</title>
+    <title>Hackathons</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link href="research.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="hackathons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
     <script src="https://kit.fontawesome.com/77a7390808.js" crossorigin="anonymous"></script>
-
 </head>
 
 <body>
+    <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container">
-            <a class="navbar-brand" href="../index.html">HackQuest Nexus</a>
+            <a class="navbar-brand" href="#">HackQuest Nexus</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -26,10 +26,13 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link shining-text" href="../hackathon_planner/planner.html">Planner</a>
+                        <a class="nav-link shining-text" href="resource_hub/research.html">Resource Hub</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link shining-text" href="../mentorship/mentorship.html">Mentors</a>
+                        <a class="nav-link shining-text" href="hackathon_planner/planner.html">Planner</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link shining-text" href="mentorship/mentorship.html">Mentors</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link shining-text" href="#">Hackathons</a>
@@ -38,10 +41,11 @@
                         <a class="nav-link shining-text" href="#">Generate Ideas</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link shining-text" href="#">Code Quests</a>
+                        <a class="nav-link shining-text" href="code_quest_and_storytelling/codequest.html">Code Quests</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link shining-text" href="../project_showcase/project_showcase.html">Project Showcase</a>
+                        <a class="nav-link shining-text" href="project_showcase/project_showcase.html">Project
+                            Showcase</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link shining-text" href="profile/profile.html">
@@ -52,40 +56,34 @@
             </div>
         </div>
     </nav>
-
+    <!-- main content -->
     <main class="main-content">
-        <section class="search">
-            <h2 class="section-title">Documentation and Video Lectures</h2>
-            <div class="search-form">
-                <input type="text" id="search-input" class="form-control" placeholder="Search...">
-                <select id="category-filter" class="form-control">
-                    <option value="All">All</option>
-                    <option value="Frontend">Frontend</option>
-                    <option value="Backend">Backend</option>
-                </select>
-                <button type="button" id="search-btn" class="btn btn-primary">Search</button>
-            </div>
+        <section class="hackathons">
+            <h2 class="section-title">Hackathons</h2>
+            <p>Explore and participate in exciting hackathons.</p>
+            <div class="hackathon-list" id="hackathon-list"></div>
         </section>
 
-        <section class="search-results" id="search-results">
+        <section class="create-hackathon">
+            <h2 class="section-title">Create a Hackathon</h2>
+            <form id="create-hackathon-form">
+                <div class="form-group">
+                    <label for="hackathon-title">Title</label>
+                    <input type="text" id="hackathon-title" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="hackathon-description">Description</label>
+                    <textarea id="hackathon-description" class="form-control" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="hackathon-organizer">Organizer</label>
+                    <input type="text" id="hackathon-organizer" class="form-control" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Create Hackathon</button>
+            </form>
         </section>
     </main>
-    
-    <div class="modal fade" id="documentationModal" tabindex="-1" role="dialog" aria-labelledby="documentationModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="documentationModalLabel">Documentation Content</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body" id="documentationModalBody">
-                </div>
-            </div>
-        </div>
-    </div>
+    <br/>
     <!-- footer -->
     <footer class="footer bg-dark text-white py-5">
         <div class="container">
@@ -103,9 +101,8 @@
                 </div>
             </div>
         </div>
-    </footer>
-    <script src="research.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+    </footer>    
+    <script src="hackathons.js"></script>
 </body>
 
 </html>

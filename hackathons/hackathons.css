@@ -1,0 +1,126 @@
+body {
+    background: linear-gradient(45deg, #25274d, #000);
+    color: #fff;
+    font-family: Arial, sans-serif;
+    margin: 10px;
+    padding: 10px;
+}
+.hackathon-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    margin-top: 30px;
+}
+
+.hackathon-card {
+    background-color: #333;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.hackathon-card:hover {
+    transform: translateY(-5px);
+}
+
+.hackathon-title {
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.hackathon-description {
+    color: #d9d9d9;
+    margin-bottom: 10px;
+}
+
+.hackathon-organizer {
+    color: #d9d9d9;
+    font-style: italic;
+}
+
+.hackathon-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.hackathon-join-btn,
+.hackathon-organize-btn {
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.hackathon-join-btn {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.hackathon-organize-btn {
+    background-color: #28a745;
+    color: #fff;
+}
+
+/* Create Hackathon form */
+.create-hackathon {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+.create-hackathon h2 {
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons li {
+    margin: 0 10px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}

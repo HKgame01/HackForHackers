@@ -1,0 +1,112 @@
+body {
+    background-color: #1f1f1f;
+    color: #fff;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #333;
+}
+
+.navbar-brand {
+    color: #fff;
+}
+
+.nav-link {
+    color: #fff;
+}
+
+.main-content {
+    padding: 20px;
+}
+
+.section-title {
+    color: #007bff;
+}
+
+.card {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+.card-header {
+    background-color: #007bff;
+    border-radius: 10px 10px 0 0;
+    padding: 10px;
+}
+
+.card-title {
+    margin: 0;
+    color: #fff;
+}
+
+.card-body {
+    padding: 10px;
+}
+
+.card-body p {
+    margin-bottom: 0;
+}
+
+.footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons li {
+    margin-right: 10px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 24px;
+    text-decoration: none;
+}
+
+.social-icons a:hover {
+    color: #007bff;
+}
+
+@media (max-width: 768px) {
+    .navbar-expand-lg .navbar-collapse {
+        background-color: #333;
+    }
+}
+.card-columns {
+    column-count: 2;
+    column-gap: 20px;
+}
+
+.rsvp-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-top: 10px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.rsvp-btn:hover {
+    background-color: #0056b3;
+}
+img{
+    width: 200px;
+    height: 200px;
+}
