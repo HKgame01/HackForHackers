@@ -1,5 +1,5 @@
 body {
-    background-color: #021d1c;
+    background-color: #000;
     color: beige;
     margin: 1px;
 }
@@ -7,7 +7,7 @@ body {
 .hero {
     color: #fff;
     padding: 100px 0;
-    background: linear-gradient(135deg, #AEB8FE 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #52154E 0%, #764ba2 100%);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
@@ -23,11 +23,12 @@ body {
 
 .card {
     border-radius: 10px;
-    background: linear-gradient(135deg, #9BF3F0 0%, #DAFFED 100%);
+    background: linear-gradient(135deg, #4a1446 0%, #52154E 100%);
     box-shadow: 0 4px 10px rgba(172, 197, 197, 0.9);
     transition: transform 0.3s;
     cursor: pointer;
     position: relative;
+    margin: 2px;
 }
 
 .card:before {
@@ -108,4 +109,35 @@ li:hover {
     to {
         background-position: 200% center;
     }
+}
+.footer {
+    background-color: #1f1f1f;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.social-icons {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icons li {
+    margin: 0 10px;
+}
+
+.social-icons a {
+    color: #fff;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #007bff;
 }
