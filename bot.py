@@ -3,7 +3,8 @@ import os
 import discord
 
 TOKEN = os.environ['BOT_TOKEN']
-openai.api_key = "API"
+API = os.environ["API"]
+openai.api_key = API
 
 API_KEY = "API"
 client = discord.Client(intents=discord.Intents.all())
