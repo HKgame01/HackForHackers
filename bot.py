@@ -13,3 +13,23 @@ bot = discord.Client(intents=discord.Intents.all())
 async def on_ready():    
     print(f"Logged in as {bot.user}")
 
+@bot.command()
+async def start(ctx):
+    await ctx.send("Hello, Welcome to the bot. Please use !help to see the available commands.")
+
+# Help command
+@bot.command()
+async def help(ctx):
+    help_message = """
+    To start with, tell us your idea:
+    `?idea (your idea)`
+    
+    Use the following commands to get:
+    `?title` - The appropriate title for your idea
+    `?description` - The appropriate description for your idea
+    `?tags` - The appropriate tags for your idea
+    `?communitypost` - A good YouTube community post for your channel
+    `?script (video idea)` - A script for your video idea
+    """
+    
+    await ctx.send(help_message)
