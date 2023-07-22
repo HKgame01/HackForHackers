@@ -42,3 +42,14 @@
         transform: scale(1);
     }
 }
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    height: 250px;
+}
+
+.project-image {
+    height: 200px;
+    object-fit:contain;
+}
