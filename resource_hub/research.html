@@ -201,7 +201,7 @@ ${projectLicense}
         const downloadLink = document.getElementById("download-readme-link");
         const readmeBlob = new Blob([readmeContent], { type: 'text/plain' });
         downloadLink.href = URL.createObjectURL(readmeBlob);
-        downloadLink.download = `${projectName}_README.md`;
+        downloadLink.download = `README.md`;
     });
     </script>
     </body>
