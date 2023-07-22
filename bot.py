@@ -34,3 +34,10 @@ async def help(ctx):
 async def about(ctx):
     await ctx.send("This bot is made for Hack For Hackers")
 
+@bot.command()
+async def idea(ctx, *, user_idea):
+    rawidea = openai.Completion.create(engine="text-davinci-003", prompt=f'tell me a good youtube video idea"', max_tokens=1000)
+    idea = rawidea.choices[0]["text"]
+    await ctx.send(f"The best idea for your Youtube Channel after reviewing your content is\n{idea}")
+
+
