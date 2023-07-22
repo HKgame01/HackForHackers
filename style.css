@@ -53,3 +53,11 @@
     height: 200px;
     object-fit:contain;
 }
+
+#project-container
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-size: large;
+}
