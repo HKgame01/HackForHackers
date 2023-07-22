@@ -39,4 +39,14 @@ async def idea(ctx, *, user_idea):
     idea = rawidea.choices[0]["text"]
     await ctx.send(f"The best title, description and tags for your Youtube Video after reviewing your idea is\n{idea}")
 
+@bot.command()
+async def communitypost(ctx):
+    rawcomm = openai.Completion.create(engine="text-davinci-003", prompt=f'tell me a good youtube community post for the channel"', max_tokens=1000)
+    comm = rawcomm.choices[0]["text"]
+    await ctx.send(f"The best community for your Youtube Channel after reviewing your content is\n`{comm}`")
 
+@bot.command()
+async def script(ctx, *, video_idea):
+    scr_waw = openai.Completion.create(engine="text-davinci-003", prompt=f'write a script on "{video_idea}"', max_tokens=1000)
+    script = scr_waw.choices[0]["text"]
+    await ctx.send(f"Here you go:\n{script}")
