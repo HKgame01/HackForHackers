@@ -50,3 +50,12 @@ async def script(ctx, *, video_idea):
     scr_waw = openai.Completion.create(engine="text-davinci-003", prompt=f'write a script on "{video_idea}"', max_tokens=1000)
     script = scr_waw.choices[0]["text"]
     await ctx.send(f"Here you go:\n{script}")
+
+@bot.command()
+async def randomidea(ctx):
+    prompt = "tell me a random idea for hackathon"
+    response = openai.Completion.create(engine="text-davinci-003", prompt=prompt, max_tokens=1000)
+    random_idea = response.choices[0]["text"].strip()
+
+    await ctx.send(f"Here's a random Idea for the hackathon:\n{random_idea}")
+
