@@ -22,14 +22,15 @@ async def start(ctx):
 async def help(ctx):
     help_message = """
     To start with, tell us your idea:
-    `?idea (your idea)`
-    
-    Use the following commands to get:
-    `?title` - The appropriate title for your idea
-    `?description` - The appropriate description for your idea
-    `?tags` - The appropriate tags for your idea
+    `?idea (your idea for yt video)` - It will generate title, description and tags according to your idea
     `?communitypost` - A good YouTube community post for your channel
     `?script (video idea)` - A script for your video idea
+    `?randomidea` - It will generate a random idea
     """
     
     await ctx.send(help_message)
+
+@bot.command()
+async def about(ctx):
+    await ctx.send("This bot is made for Hack For Hackers")
+
