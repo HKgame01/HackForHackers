@@ -153,3 +153,6 @@ searchInput.addEventListener('keypress', event => {
 });
 
 renderSearchResultsAndPagination(documentationData, 1, 5);
+
+
+
