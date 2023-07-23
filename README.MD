@@ -1,3 +1,9 @@
+## HACKQUEST NEXUS
+<img src = "https://github.com/vaishnavi-3969/HackQuest-Nexus-HackForHackers/blob/main/assets/codequest2.png"/>
+
+## Tools and Technologies used
+[![My Skills](https://skillicons.dev/icons?i=js,html,css,vscode,git,github)](https://skillicons.dev)
+
 ## Features of the website:
 
 1. Documentation and Video Lectures: Providing developers with easy access to documentation and video lectures can help them learn new technologies and deepen their understanding of various topics. They can categorize the content based on different programming languages, frameworks, or topics.
