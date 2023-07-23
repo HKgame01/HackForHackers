@@ -1,7 +1,8 @@
 ## HACKQUEST NEXUS
 <img src = "https://github.com/vaishnavi-3969/HackQuest-Nexus-HackForHackers/blob/main/assets/codequest2.png"/>
 
-
+## Tools and Technologies used
+[![My Skills](https://skillicons.dev/icons?i=js,html,css,vscode,git,github)](https://skillicons.dev)
 
 ## Features of the website:
 
