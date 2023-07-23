@@ -1,5 +1,8 @@
 ## HACKQUEST NEXUS
 
+
+
+
 ## Features of the website:
 
 1. Documentation and Video Lectures: Providing developers with easy access to documentation and video lectures can help them learn new technologies and deepen their understanding of various topics. They can categorize the content based on different programming languages, frameworks, or topics.
