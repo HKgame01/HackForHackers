@@ -1,85 +1,45 @@
-let calendar = document.querySelector('.calendar')
+const currentDate = document.querySelector(".current-date");
 
-const month_names = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+let date = new Date(),
+  currYear = date.getFullYear(),
+currMonth = date.getMonth;
 
-isLeapYear = (year) => {
-    return (year % 4 === 0 && year % 100 !== 0 && year % 400 !== 0) || (year % 100 === 0 && year % 400 ===0)
+const months = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+
+const renderCalendar = () => {
+  let firstDayofMonth = new Date(currYear, currMonth, 1).getDay(),
+    lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate(),
+  lastDayofMonth = new Date(currYear, currMonth, lastDateofMonth).getDay(),
+    lastDateofLastMonth = new Date(currYear, currMonth, 0).getDate();
+  let liTag = "";
+
+  for(let i = firstDayofMonth; i > 0; i--) {
+    liTag += `<li class="inactive">${lastDateofLastMonth - i + 1}</li>`;  
+  }
+  
+  for(let i = 1; i <= lastDateofMonth; i++) {
+    liTag += `<li>${i}</li>`; 
+  }
+
+  for(let i = lastDateofMonth; i < 6; i++) {
+  liTag += `<li class="inactive">${lastDateofLastMonth - i + 1}</li>`;
+  }
+    currentDate.innerText = `${months[currMonth]} ${currYear}`;
+  daysTag.innerHTML = liTag;
 }
+renderCalendar();
+prevNextIcon.forEach(icon => {
+  icon.addEventListener("click", () => {
+    currMonth = icon.id === "prev" ? currMonth - 1 : currMonth + 1;
 
-getFebDays = (year) => {
-    return isLeapYear(year) ? 29 : 28
-}
-
-generateCalendar = (month, year) => {
-
-    let calendar_days = calendar.querySelector('.calendar-days')
-    let calendar_header_year = calendar.querySelector('#year')
-
-    let days_of_month = [31, getFebDays(year), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
-
-    calendar_days.innerHTML = ''
-
-    let currDate = new Date()
-    if (month > 11 || month < 0) month = currDate.getMonth()
-    if (!year) year = currDate.getFullYear()
-
-    let curr_month = `${month_names[month]}`
-    month_picker.innerHTML = curr_month
-    calendar_header_year.innerHTML = year
-
-    // get first day of month
-    
-    let first_day = new Date(year, month, 1)
-
-    for (let i = 0; i <= days_of_month[month] + first_day.getDay() - 1; i++) {
-        let day = document.createElement('div')
-        if (i >= first_day.getDay()) {
-            day.classList.add('calendar-day-hover')
-            day.innerHTML = i - first_day.getDay() + 1
-            day.innerHTML += `<span></span>
-                            <span></span>
-                            <span></span>
-                            <span></span>`
-            if (i - first_day.getDay() + 1 === currDate.getDate() && year === currDate.getFullYear() && month === currDate.getMonth()) {
-                day.classList.add('curr-date')
-            }
-        }
-        calendar_days.appendChild(day)
+    if(currMonth < 0 || currMonth > 11) {
+      date = new Date(currYear, currMonth);
+      currYear = date.getFullYear();
+      currMonth = date.getMonth();
+    } else {
+      date = newDate();
     }
-}
-
-let month_list = calendar.querySelector('.month-list')
-
-month_names.forEach((e, index) => {
-    let month = document.createElement('div')
-    month.innerHTML = `<div data-month="${index}">${e}</div>`
-    month.querySelector('div').onclick = () => {
-        month_list.classList.remove('show')
-        curr_month.value = index
-        generateCalendar(index, curr_year.value)
     }
-    month_list.appendChild(month)
-})
-
-let month_picker = calendar.querySelector('#month-picker')
-
-month_picker.onclick = () => {
-    month_list.classList.add('show')
-}
-
-let currDate = new Date()
-
-let curr_month = {value: currDate.getMonth()}
-let curr_year = {value: currDate.getFullYear()}
-
-generateCalendar(curr_month.value, curr_year.value)
-
-document.querySelector('#prev-year').onclick = () => {
-    --curr_year.value
-    generateCalendar(curr_month.value, curr_year.value)
-}
-
-document.querySelector('#next-year').onclick = () => {
-    ++curr_year.value
-    generateCalendar(curr_month.value, curr_year.value)
-}
+    renderCalendar();
+  });
+});
